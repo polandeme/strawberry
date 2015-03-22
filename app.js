@@ -2,6 +2,8 @@ var express = require('express');
 
 var routes = require('./controller');
 
+var morgan = require('morgan');
+
 var path = require('path');
 
 var http = require('http');
@@ -22,6 +24,9 @@ var proxyApi = httpProxy.createProxyServer({
     target: defaultConfig.urlBackend
 });
 
+var logger = morgan('combined');
+
+app.use(logger);
 app.use(function(req, res, next) {
 	if (req.url.indexOf('/api/v1') === 0) {
 		proxyApi.web(req, res, {}, next);

@@ -7,7 +7,8 @@ module.exports = function(app) {
 		res.render('signup');
 	});
 	
-	app.get('/wechat', wechat('wechatToken', function(req, res, next) {
+	app.get('/wechat', wechat(defaultConfig.wechat.config, function(req, res, next) {
+		console.log('req');
 		api.createMenu(defaultConfig.wechat.menu, function(err, result) {
 			console.log(result);
 		})
