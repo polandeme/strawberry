@@ -8,11 +8,19 @@ module.exports = function(app) {
 	});
 	
 	app.get('/wechat', wechat(defaultConfig.wechat.config, function(req, res, next) {
-		console.log('req');
-		api.createMenu(defaultConfig.wechat.menu, function(err, result) {
-			console.log(result);
-		})
+//		api.createMenu(defaultConfig.wechat.menu, function(err, result) {
+//			console.log(result);
+//		})
+	}));
+	
+	app.post('/wechat', wechat(defaultConfig.wechat.config, function(req, res, next) {
 		var message = req.weixin;
-		console.log(message);
+		res.reply([
+			{
+				title: "你好时光",
+				description: "你好时光",
+				url: "http://slowlytime.com/signup"
+			}
+		]);
 	}));
 }
