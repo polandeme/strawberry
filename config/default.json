@@ -1,8 +1,30 @@
 {
 	"urlBackend": "http://127.0.0.1:1337",
 	"wechat": {
-		"appid": "wx5f61bc5fbe9c9232",
-		"encodingAESKey": "lwU8rDHz0tyXHIhnB43K8zZYl9uKdWQaPNoakEXx0XX",
-		"token": "123456"
+		"config": {
+			"appid": "wx5f61bc5fbe9c9232",
+			"appsecret": "a4bd97a8e7d4a5bc8093f8189d981a88",
+			"encodingAESKey": "lwU8rDHz0tyXHIhnB43K8zZYl9uKdWQaPNoakEXx0XX",
+			"token": "123456"
+		},
+		"menu": {
+			"button": [
+				{
+					"type": "click",
+					"name": "书单",
+					"key": "book_collection"
+				},
+				{
+					"type": "click",
+					"name": "书评",
+					"key": "book_comment"
+				},
+				{
+					"type": "click",
+					"name": "圈子",
+					"key": "book_circle"
+				}
+			]
+		}
 	}
 }
