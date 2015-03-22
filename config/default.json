@@ -1,3 +1,8 @@
 {
-	"urlBackend": "http://127.0.0.1:1337"
+	"urlBackend": "http://127.0.0.1:1337",
+	"wechat": {
+		"appid": "wx5f61bc5fbe9c9232",
+		"encodingAESKey": "lwU8rDHz0tyXHIhnB43K8zZYl9uKdWQaPNoakEXx0XX",
+		"token": "123456"
+	}
 }
