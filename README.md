@@ -11,11 +11,11 @@
 	
 ## Run
 
--  ### Development mode
+- ###Development mode
 	
 		npm run dev
 	
--  ### Production mode
+- ###Production mode
 	
 		npm run start // start this app
 		
