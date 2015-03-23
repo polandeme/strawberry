@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "pm2 start app.js --name 'strawberry'",
+    "reload": "pm2 stop strawberry"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
     "less-middleware": "^2.0.1",
     "morgan": "^1.5.2",
     "nodemon": "^1.3.7",
+    "pm2": "^0.12.8",
     "wechat": "^1.2.3"
   }
 }
